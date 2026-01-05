@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Controle Financeiro</h1>
+
+    <div class="saldo">
+  <h2>Saldo: R$ <span id="balance">0.00</span></h2>
+  <div class="resumo">
+    <p>Receitas: R$ <span id="totalIncome">0.00</span></p>
+    <p>Despesas: R$ <span id="totalExpense">0.00</span></p>
+  </div>
+</div>
+
+<div class="filters">
+  <button onclick="setFilter('all')">Todos</button>
+  <button onclick="setFilter('income')">Receitas</button>
+  <button onclick="setFilter('expense')">Despesas</button>
+</div>
+
+
+    <div class="form">
+      <input type="text" id="description" placeholder="Descrição">
+      <input type="number" id="amount" placeholder="Valor">
+      <select id="type">
+        <option value="income">Receita</option>
+        <option value="expense">Despesa</option>
+      </select>
+      <button id="addBtn">Adicionar</button>
+    </div>
+
+    <ul id="list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
